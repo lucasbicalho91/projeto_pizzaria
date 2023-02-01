@@ -30,12 +30,14 @@ export default function Home() {
 
           <Button
             type="submit"
-            loading={true}
+            loading={false}
           >
-            Cadastrar
+            Acessar
             </Button>
-
         </form>
+
+        <a className={styles.text}>Não possui uma conta? Cadastre-se</a>
+
       </div>
     </div>
     </>
