@@ -24,12 +24,20 @@ export default function Home() {
   async function handleLogin(event: FormEvent) {
     event.preventDefault();
 
+    if (email == '' || password === '') {
+      return;
+    }
+
+    setloading (true);
+
     let data = {
       email,
       password
     }
 
     await signIn(data)
+
+    setloading (false);
   }
 
   return (
